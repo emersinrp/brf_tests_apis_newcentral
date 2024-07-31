@@ -1,0 +1,8 @@
+__pycache__
+.pytest_cache
+/helpers/__pycache__
+/payloads/__pycache__
+/tests/__pycache__
+venv_apis_newcentral
+locust_errors.log
+locust_success.log
