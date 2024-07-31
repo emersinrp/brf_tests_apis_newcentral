@@ -23,4 +23,4 @@ class GraphQLUser(HttpUser):
             'variables': PERSON_CREDIT_VARIABLES
         }
         
-        handle_request(self.client, endpoint, headers, payload, "test_person_credit")
+        handle_request(self.client, endpoint, headers, payload, "test_person_credit", "Person credit GraphQL")
