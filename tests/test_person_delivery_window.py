@@ -12,4 +12,4 @@ def test_person_delivery_window(self):
         'variables': get_person_delivery_window_variables()
     }
     
-    handle_request(self.client, endpoint, headers, payload, "test_person_delivery_window", "Person delivery window GraphQL")
+    handle_request(self.client, endpoint, headers, payload, "test_person_delivery_window", "Person delivery window")

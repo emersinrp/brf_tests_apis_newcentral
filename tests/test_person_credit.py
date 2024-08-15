@@ -12,4 +12,4 @@ def test_person_credit(self):
         'variables': get_person_credit_variables()
     }
     
-    handle_request(self.client, endpoint, headers, payload, "test_person_credit", "Person credit GraphQL")
+    handle_request(self.client, endpoint, headers, payload, "test_person_credit", "Person credit")

@@ -24,11 +24,11 @@ class PromotionTasks(TaskSet):
         payload = generate_promotion_payload()
 
         start_time = time.time()
-        with self.client.post(endpoint, headers=headers, json=payload, catch_response=True, name="Create Promotion") as response:
+        with self.client.post(endpoint, headers=headers, json=payload, catch_response=True, name="Promotion post create") as response:
             request_time = time.time() - start_time
             formatted_time = f"{request_time:.3f}"
             if response.status_code == 200:
-                success_logger.info(f"Request: Create Promotion, Time: {formatted_time}, Status Code: {response.status_code}")
+                success_logger.info(f"Request: test_create_promotion, Time: {formatted_time}, Status Code: {response.status_code}")
                 promotion_id = response.text.strip('"')
                 print(f"Generated Promotion ID: {promotion_id}")
                 response.success()
@@ -44,11 +44,11 @@ class PromotionTasks(TaskSet):
         }
 
         start_time = time.time()
-        with self.client.get(endpoint, headers=headers, catch_response=True, name="Get Promotion By ID") as response:
+        with self.client.get(endpoint, headers=headers, catch_response=True, name="Promotion get ID") as response:
             request_time = time.time() - start_time
             formatted_time = f"{request_time:.3f}"
             if response.status_code == 200:
-                success_logger.info(f"Request: Get Promotion By ID, Time: {formatted_time}, Status Code: {response.status_code}")
+                success_logger.info(f"Request: test_get_promotion_id, Time: {formatted_time}, Status Code: {response.status_code}")
                 response.success()
                 response_json = response.json()
                 assert response_json['_id'] == promotion_id, "Promotion ID mismatch"
